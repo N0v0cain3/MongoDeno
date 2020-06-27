@@ -9,3 +9,13 @@ router.get("/", (ctx) => {
     message: "eZ first / route",
   };
 });
+
+router.get("/notes", getNotes);
+
+router.get("/notes/:id", getSingleNote);
+
+router.post("/notes", createNote);
+
+router.put("/notes/:id", updateNote);
+
+router.delete("/notes/:id", deleteNote);
