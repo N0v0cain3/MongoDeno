@@ -1,0 +1,13 @@
+{
+	"$schema": "https://deno.land/x/denon/schema.json",
+	"scripts": {
+		"start": {
+			"cmd": "deno run --unstable server.ts",
+			"desc": "run my app.ts file",
+			"allow": ["env", "net", "read", "write", "plugin"],
+			"env": {
+				"MongoUri": "mongodb+srv://deno:denopassword@cluster0-jci88.mongodb.net/<dbname>?retryWrites=true&w=majority"
+			}
+		}
+	}
+}

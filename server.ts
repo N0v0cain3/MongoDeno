@@ -1,7 +1,7 @@
 import { Application, Router } from "https://deno.land/x/oak/mod.ts";
 const router = new Router();
 
-import { getNotes } from "./router.ts";
+import { getNotes } from "./routes.ts";
 
 const app = new Application();
 
@@ -26,4 +26,4 @@ app.use(router.routes());
 app.use(router.allowedMethods());
 
 app.listen({ port: 8000 });
-console.log("server is running");
+console.log("server is running at port 8000");
