@@ -45,4 +45,15 @@ const updateNote = async (ctx: RouterContext) => {
   ctx.response.body = await notesCollection.findOne({ _id: { $oid: id } });
 };
 
-export { getNotes, createNote, getSingleNote, updateNote };
+const deleteNote = async (ctx: RouterContext) => {
+  const id = ctx.params.id;
+  const count = await notesCollection.deleteOne({ _id: { $oid: id } });
+  if (!count) {
+    ctx.response.status = 404;
+    ctx.response.body = "Note does not exist";
+    return;
+  }
+  ctx.response.status = 204;
+};
+
+export { getNotes, createNote, getSingleNote, updateNote, deleteNote };

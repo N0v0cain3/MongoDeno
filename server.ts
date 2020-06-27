@@ -1,7 +1,13 @@
 import { Application, Router } from "https://deno.land/x/oak/mod.ts";
 const router = new Router();
 
-import { getNotes, createNote, getSingleNote, updateNote } from "./routes.ts";
+import {
+  getNotes,
+  createNote,
+  getSingleNote,
+  updateNote,
+  deleteNote,
+} from "./routes.ts";
 
 const app = new Application();
 
@@ -20,7 +26,7 @@ router.post("/notes", createNote);
 
 router.put("/notes/:id", updateNote);
 
-// router.delete("/notes/:id", deleteNote);
+router.delete("/notes/:id", deleteNote);
 
 app.use(router.routes());
 app.use(router.allowedMethods());
