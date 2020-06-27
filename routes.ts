@@ -3,7 +3,8 @@ import db from "./mongo.ts";
 
 const notesCollection = db.collection("notes");
 
-const getNotes = (ctx: RouterContext) => {
+const getNotes = async (ctx: RouterContext) => {
+  const notes = await notesCollection.find();
   ctx.response.body = "Get notes";
 };
 
