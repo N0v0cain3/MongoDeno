@@ -5,7 +5,19 @@ const notesCollection = db.collection("notes");
 
 const getNotes = async (ctx: RouterContext) => {
   const notes = await notesCollection.find();
-  ctx.response.body = "Get notes";
+  ctx.response.body = notes;
 };
 
-export { getNotes };
+const createNote = async (ctx: RouterContext) => {
+  const body = await ctx.request.body();
+  const note = body.value;
+  const id = await notesCollection.insertOne({ note });
+
+  ctx.response.status = 201;
+  ctx.response.body = {
+    success: true,
+    note: note,
+  };
+};
+
+export { getNotes, createNote };

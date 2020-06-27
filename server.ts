@@ -1,7 +1,7 @@
 import { Application, Router } from "https://deno.land/x/oak/mod.ts";
 const router = new Router();
 
-import { getNotes } from "./routes.ts";
+import { getNotes, createNote } from "./routes.ts";
 
 const app = new Application();
 
@@ -16,7 +16,7 @@ router.get("/notes", getNotes);
 
 // router.get("/notes/:id", getSingleNote);
 
-// router.post("/notes", createNote);
+router.post("/notes", createNote);
 
 // router.put("/notes/:id", updateNote);
 
