@@ -9,7 +9,7 @@
 > Simple CRUD operations using Deno and database
 
 ---
-[![DOCS](]https://doc.deno.land/https/github.com/denoland/deno/releases/latest/download/lib.deno.d.ts)
+[![DOCS](https://img.shields.io/badge/Documentation-see%20docs-green?style=flat-square&logo=appveyor)](INSERT_LINK_FOR_DOCS_HERE)
   [![UI ](https://img.shields.io/badge/User%20Interface-Link%20to%20UI-orange?style=flat-square&logo=appveyor)](INSERT_UI_LINK_HERE)
 
 
