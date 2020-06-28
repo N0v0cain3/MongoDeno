@@ -22,14 +22,14 @@
 
 
 ## Screenshots
-<img src="https://github.com/akshatvg/common-entry-test/raw/master/static/img/header.png" alt="Project Screenshots">
+
 
 ## Instructions to run
 
 ```
 $ git clone https://github.com/N0v0cain3/<Project>
 $ cd <Project>
-$ deno run serever.ts
+$ deno run server.ts
   or
 $ denon start
 ```
